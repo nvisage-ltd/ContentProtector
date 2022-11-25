@@ -1,18 +1,20 @@
-﻿using NPoco;
-using System;
+﻿using System;
+using NPoco;
 using Umbraco.Core.Persistence.DatabaseAnnotations;
 
-namespace ContentProtector.App_Plugins.ContentProtector.Models {
+namespace ContentProtector.Models
+{
     [TableName("ContentProtector")]
-    [PrimaryKey("id",AutoIncrement = false)]
+    [PrimaryKey("id", AutoIncrement = false)]
     [ExplicitColumns]
-    public class ActionModel {
+    public class ActionModel
+    {
         [Column("id")]
         [PrimaryKeyColumn(AutoIncrement = false)]
         public int id { get; set; }
 
         [Column("name")]
-        public string name { get; set; }        
+        public string name { get; set; }
 
         [Column("nodes")]
         public string nodes { get; set; }

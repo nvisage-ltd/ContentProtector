@@ -1,27 +1,36 @@
-﻿using ContentProtector.App_Plugins.ContentProtector.Models;
-using System;
+﻿using System;
+using ContentProtector.Models;
 using Umbraco.Core.Logging;
 using Umbraco.Core.Migrations;
 using Umbraco.Core.Scoping;
 
-namespace ContentProtector.App_Plugins.ContentProtector.Events {
-    public class CreateTableAndData:MigrationBase {
+namespace ContentProtector.Events
+{
+    public class CreateTableAndData : MigrationBase
+    {
 
         private readonly IScopeProvider _scopeProvider;
-        public CreateTableAndData(IMigrationContext context,IScopeProvider scopeProvider) : base(context) {
+        public CreateTableAndData(IMigrationContext context, IScopeProvider scopeProvider) : base(context)
+        {
             _scopeProvider = scopeProvider;
         }
-        public override void Migrate() {
+        public override void Migrate()
+        {
             // Lots of methods available in the MigrationBase class - discover with this.
-            if(TableExists("ContentProtector") == false) {
+            if (TableExists("ContentProtector") == false)
+            {
                 Create.Table<ActionModel>().Do();
             }
-            else {
-                Logger.Info<CreateTableAndData>("The database table Content Protector already exists, skipping","Content Protector");
+            else
+            {
+                Logger.Info<CreateTableAndData>("The database table Content Protector already exists, skipping", "Content Protector");
             }
-            if(TableExists("ContentProtector")) {
-                try {
-                    ActionModel saveData = new ActionModel() {
+            if (TableExists("ContentProtector"))
+            {
+                try
+                {
+                    var saveData = new ActionModel()
+                    {
                         id = 1,
                         name = "save",
                         disableAction = false,
@@ -33,7 +42,8 @@ namespace ContentProtector.App_Plugins.ContentProtector.Events {
 
                     };
 
-                    ActionModel moveData = new ActionModel() {
+                    var moveData = new ActionModel()
+                    {
                         id = 2,
                         name = "move",
                         disableAction = false,
@@ -45,7 +55,8 @@ namespace ContentProtector.App_Plugins.ContentProtector.Events {
 
                     };
 
-                    ActionModel trashData = new ActionModel() {
+                    var trashData = new ActionModel()
+                    {
                         id = 3,
                         name = "trash",
                         disableAction = false,
@@ -57,7 +68,8 @@ namespace ContentProtector.App_Plugins.ContentProtector.Events {
 
                     };
 
-                    ActionModel deleteData = new ActionModel() {
+                    var deleteData = new ActionModel()
+                    {
                         id = 4,
                         name = "delete",
                         disableAction = false,
@@ -69,7 +81,8 @@ namespace ContentProtector.App_Plugins.ContentProtector.Events {
 
                     };
 
-                    ActionModel copyData = new ActionModel() {
+                    var copyData = new ActionModel()
+                    {
                         id = 5,
                         name = "copy",
                         disableAction = false,
@@ -81,7 +94,8 @@ namespace ContentProtector.App_Plugins.ContentProtector.Events {
 
                     };
 
-                    ActionModel publishData = new ActionModel() {
+                    var publishData = new ActionModel()
+                    {
                         id = 6,
                         name = "publish",
                         disableAction = false,
@@ -93,7 +107,8 @@ namespace ContentProtector.App_Plugins.ContentProtector.Events {
 
                     };
 
-                    ActionModel unpublishData = new ActionModel() {
+                    var unpublishData = new ActionModel()
+                    {
                         id = 7,
                         name = "unpublish",
                         disableAction = false,
@@ -105,7 +120,8 @@ namespace ContentProtector.App_Plugins.ContentProtector.Events {
 
                     };
 
-                    ActionModel rollBackData = new ActionModel() {
+                    var rollBackData = new ActionModel()
+                    {
                         id = 8,
                         name = "rollBack",
                         disableAction = false,
@@ -117,7 +133,8 @@ namespace ContentProtector.App_Plugins.ContentProtector.Events {
 
                     };
 
-                    using(var scope = _scopeProvider.CreateScope(autoComplete: true)) {
+                    using (IScope scope = _scopeProvider.CreateScope(autoComplete: true))
+                    {
                         scope.Database.Save<ActionModel>(saveData);
                         scope.Database.Save<ActionModel>(moveData);
                         scope.Database.Save<ActionModel>(trashData);
@@ -128,8 +145,9 @@ namespace ContentProtector.App_Plugins.ContentProtector.Events {
                         scope.Database.Save<ActionModel>(rollBackData);
                     }
                 }
-                catch(Exception ex) {
-                    Logger.Error<ActionModel>("Failed to save Content Protector initial settings",ex.Message);
+                catch (Exception ex)
+                {
+                    Logger.Error<ActionModel>("Failed to save Content Protector initial settings", ex.Message);
                 }
 
             }

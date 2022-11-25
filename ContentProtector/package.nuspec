@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <!--*-->
+    <id>ContentProtector</id>
+    <!--*-->
+    <version>1.1.1-beta</version>
+    <title>ContentProtector</title>
+    <!--*-->
+    <authors>Christopher Muya, nvisage-ltd</authors>
+    <owners>Christopher Muya</owners>
+    <!--
+    <licenseUrl></licenseUrl>
+-->
+    <projectUrl>https://github.com/christophermuya/ContentProtector</projectUrl>
+    <iconUrl>https://chrismuya.com/media/tlvpdjhh/contentprotector.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <!--*-->
+    <description>Protect content nodes for Umbraco 8</description>
+    <!--*-->
+    <releaseNotes>
+      - 1.1.1-beta
+      * Service Support
+      - 1.1.0
+      * Fixed node icons not showing.
+      - 1.0.0
+      First release.
+    </releaseNotes>
+    <copyright>MIT</copyright>
+    <tags>Umbraco8 content node protect item property Editor users group block action</tags>
+    <dependencies>
+      <!--
+      <dependency id="SampleDependency" version="1.0" />
+-->
+    </dependencies>
+  </metadata>
+</package>
