@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 using ContentProtector.Models;
 using Umbraco.Core.Composing;
@@ -45,7 +45,7 @@ namespace ContentProtector.Components
 
             using (UmbracoContextReference contextReference = _context.EnsureUmbracoContext())
             {
-                _currentUserId = contextReference.UmbracoContext.Security.IsAuthenticated() ? contextReference.UmbracoContext.Security.CurrentUser.Id : -1;
+                _currentUserId = contextReference.UmbracoContext.Security.IsAuthenticated() ? contextReference.UmbracoContext.Security.CurrentUser.Id : Umbraco.Core.Constants.Security.SuperUserId;
             }
 
             try
@@ -85,7 +85,7 @@ namespace ContentProtector.Components
 
             using (UmbracoContextReference contextReference = _context.EnsureUmbracoContext())
             {
-                _currentUserId = contextReference.UmbracoContext.Security.IsAuthenticated() ? contextReference.UmbracoContext.Security.CurrentUser.Id : -1;
+                _currentUserId = contextReference.UmbracoContext.Security.IsAuthenticated() ? contextReference.UmbracoContext.Security.CurrentUser.Id : Umbraco.Core.Constants.Security.SuperUserId;
             }
 
             try
@@ -125,7 +125,7 @@ namespace ContentProtector.Components
 
             using (UmbracoContextReference contextReference = _context.EnsureUmbracoContext())
             {
-                _currentUserId = contextReference.UmbracoContext.Security.IsAuthenticated() ? contextReference.UmbracoContext.Security.CurrentUser.Id : -1;
+                _currentUserId = contextReference.UmbracoContext.Security.IsAuthenticated() ? contextReference.UmbracoContext.Security.CurrentUser.Id : Umbraco.Core.Constants.Security.SuperUserId;
             }
 
             try
@@ -162,7 +162,7 @@ namespace ContentProtector.Components
 
             using (UmbracoContextReference contextReference = _context.EnsureUmbracoContext())
             {
-                _currentUserId = contextReference.UmbracoContext.Security.IsAuthenticated() ? contextReference.UmbracoContext.Security.CurrentUser.Id : -1;
+                _currentUserId = contextReference.UmbracoContext.Security.IsAuthenticated() ? contextReference.UmbracoContext.Security.CurrentUser.Id : Umbraco.Core.Constants.Security.SuperUserId;
             }
 
             try
@@ -202,7 +202,7 @@ namespace ContentProtector.Components
 
             using (UmbracoContextReference contextReference = _context.EnsureUmbracoContext())
             {
-                _currentUserId = contextReference.UmbracoContext.Security.IsAuthenticated() ? contextReference.UmbracoContext.Security.CurrentUser.Id : -1;
+                _currentUserId = contextReference.UmbracoContext.Security.IsAuthenticated() ? contextReference.UmbracoContext.Security.CurrentUser.Id : Umbraco.Core.Constants.Security.SuperUserId;
             }
 
             try
@@ -240,7 +240,7 @@ namespace ContentProtector.Components
         //    int _currentUserId;
 
         //    using(var contextReference = _context.EnsureUmbracoContext()) {
-        //      _currentUserId = contextReference.UmbracoContext.Security.IsAuthenticated()? contextReference.UmbracoContext.Security.CurrentUser.Id : -1;
+        //      _currentUserId = contextReference.UmbracoContext.Security.IsAuthenticated()? contextReference.UmbracoContext.Security.CurrentUser.Id : Umbraco.Core.Constants.Security.SuperUserId;
         //    }
 
         //    try {
@@ -272,7 +272,7 @@ namespace ContentProtector.Components
         //    int _currentUserId;
 
         //    using(var contextReference = _context.EnsureUmbracoContext()) {
-        //      _currentUserId = contextReference.UmbracoContext.Security.IsAuthenticated()? contextReference.UmbracoContext.Security.CurrentUser.Id : -1;
+        //      _currentUserId = contextReference.UmbracoContext.Security.IsAuthenticated()? contextReference.UmbracoContext.Security.CurrentUser.Id : Umbraco.Core.Constants.Security.SuperUserId;
         //    }
 
         //    try {
@@ -305,7 +305,7 @@ namespace ContentProtector.Components
 
             using (UmbracoContextReference contextReference = _context.EnsureUmbracoContext())
             {
-                _currentUserId = contextReference.UmbracoContext.Security.IsAuthenticated() ? contextReference.UmbracoContext.Security.CurrentUser.Id : -1;
+                _currentUserId = contextReference.UmbracoContext.Security.IsAuthenticated() ? contextReference.UmbracoContext.Security.CurrentUser.Id : Umbraco.Core.Constants.Security.SuperUserId;
             }
 
             try
