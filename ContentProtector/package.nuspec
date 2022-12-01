@@ -4,7 +4,7 @@
     <!--*-->
     <id>ContentProtector</id>
     <!--*-->
-    <version>1.1.1-beta</version>
+    <version>1.1.1.1-beta</version>
     <title>ContentProtector</title>
     <!--*-->
     <authors>Christopher Muya, nvisage-ltd</authors>
@@ -19,7 +19,7 @@
     <description>Protect content nodes for Umbraco 8</description>
     <!--*-->
     <releaseNotes>
-      - 1.1.1-beta
+      - 1.1.1.1-beta
       * Service Support
       - 1.1.0
       * Fixed node icons not showing.
@@ -29,9 +29,7 @@
     <copyright>MIT</copyright>
     <tags>Umbraco8 content node protect item property Editor users group block action</tags>
     <dependencies>
-      <!--
-      <dependency id="SampleDependency" version="1.0" />
--->
+      <dependency id="UmbracoCms.Web" version="[8.18.0, 8.999999.0)" />
     </dependencies>
   </metadata>
 </package>
