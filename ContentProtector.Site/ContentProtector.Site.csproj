@@ -323,43 +323,6 @@
     <Content Include="App_Plugins\ContentProtector\JsControllers\info.controller.js" />
     <Content Include="App_Plugins\ContentProtector\JsControllers\protection.controller.js" />
     <Content Include="App_Plugins\ContentProtector\Resources\cpResource.js" />
-    <Content Include="App_Plugins\OsmMaps\assets\css\osmmaps.css" />
-    <Content Include="App_Plugins\OsmMaps\assets\leaflet\images\layers-2x.png" />
-    <Content Include="App_Plugins\OsmMaps\assets\leaflet\images\layers.png" />
-    <Content Include="App_Plugins\OsmMaps\assets\leaflet\images\marker-icon-2x.png" />
-    <Content Include="App_Plugins\OsmMaps\assets\leaflet\images\marker-icon.png" />
-    <Content Include="App_Plugins\OsmMaps\assets\leaflet\images\marker-shadow.png" />
-    <Content Include="App_Plugins\OsmMaps\assets\leaflet\leaflet-src.js" />
-    <Content Include="App_Plugins\OsmMaps\assets\leaflet\leaflet.css" />
-    <Content Include="App_Plugins\OsmMaps\assets\leaflet\leaflet.js" />
-    <Content Include="App_Plugins\OsmMaps\langs\da-dk.js" />
-    <Content Include="App_Plugins\OsmMaps\langs\de-de.js" />
-    <Content Include="App_Plugins\OsmMaps\langs\en-gb.js" />
-    <Content Include="App_Plugins\OsmMaps\langs\en-us.js" />
-    <Content Include="App_Plugins\OsmMaps\langs\es-es.js" />
-    <Content Include="App_Plugins\OsmMaps\langs\fr-fr.js" />
-    <Content Include="App_Plugins\OsmMaps\langs\he-il.js" />
-    <Content Include="App_Plugins\OsmMaps\langs\it-it.js" />
-    <Content Include="App_Plugins\OsmMaps\langs\ja-jp.js" />
-    <Content Include="App_Plugins\OsmMaps\langs\ko-kr.js" />
-    <Content Include="App_Plugins\OsmMaps\langs\nb-no.js" />
-    <Content Include="App_Plugins\OsmMaps\langs\nl-nl.js" />
-    <Content Include="App_Plugins\OsmMaps\langs\pl-pl.js" />
-    <Content Include="App_Plugins\OsmMaps\langs\pt-br.js" />
-    <Content Include="App_Plugins\OsmMaps\langs\ru-ru.js" />
-    <Content Include="App_Plugins\OsmMaps\langs\sv-se.js" />
-    <Content Include="App_Plugins\OsmMaps\langs\zh-cn.js" />
-    <Content Include="App_Plugins\OsmMaps\OsmMaps.controller.js" />
-    <Content Include="App_Plugins\OsmMaps\OsmMaps.html" />
-    <Content Include="App_Plugins\StarterKit\lang\en-GB.xml" />
-    <Content Include="App_Plugins\StarterKit\lang\en-US.xml" />
-    <Content Include="App_Plugins\StarterKit\lessons.service.js" />
-    <Content Include="App_Plugins\StarterKit\StarterKitHelp.Controller.js" />
-    <Content Include="App_Plugins\StarterKit\starterkithelp.html" />
-    <Content Include="App_Plugins\StarterKit\tours\views\medialibrary\uploadimages.controller.js" />
-    <Content Include="App_Plugins\StarterKit\tours\views\medialibrary\uploadimages.html" />
-    <Content Include="App_Plugins\StarterKit\tours\views\validatetext.controller.js" />
-    <Content Include="App_Plugins\StarterKit\tours\views\validatetext.html" />
     <Content Include="App_Plugins\uSync8\backoffice\uSync8\dashboard.html" />
     <Content Include="App_Plugins\uSync8\backoffice\uSync8\uSyncDashboardController.js" />
     <Content Include="App_Plugins\uSync8\changeDialog.html" />
@@ -408,11 +371,7 @@
     <Content Include="config\Lang\sv-SE.user.xml" />
     <Content Include="config\Lang\zh-CN.user.xml" />
     <Content Include="config\logviewer.searches.config.js" />
-    <Content Include="css\umbraco-starterkit-style.css" />
     <Content Include="Global.asax" />
-    <Content Include="scripts\umbraco-starterkit-app.js" />
-    <Content Include="Views\MacroPartials\FeaturedProducts.cshtml" />
-    <Content Include="Views\MacroPartials\LatestBlogposts.cshtml" />
     <Content Include="Views\Partials\BlockList\Default.cshtml" />
     <Content Include="Views\Partials\Grid\Bootstrap3-Fluid.cshtml" />
     <Content Include="Views\Partials\Grid\Bootstrap3.cshtml" />
@@ -444,27 +403,9 @@
     <Content Include="config\uSync8.config" />
     <Content Include="App_Plugins\uSync8\package.manifest" />
     <Content Include="App_Plugins\uSync8\addons.json" />
-    <Content Include="App_Plugins\OsmMaps\package.manifest" />
-    <Content Include="App_Plugins\StarterKit\backoffice\tours\create-content.json" />
-    <Content Include="App_Plugins\StarterKit\backoffice\tours\data-structure.json" />
-    <Content Include="App_Plugins\StarterKit\package.manifest" />
     <Content Include="App_Data\packages\installedPackages.config" />
     <Content Include="App_Plugins\ContentProtector\package.manifest" />
     <None Include="packages.config" />
-    <Content Include="Views\Blog.cshtml" />
-    <Content Include="Views\Blogpost.cshtml" />
-    <Content Include="Views\contact.cshtml" />
-    <Content Include="Views\contentPage.cshtml" />
-    <Content Include="Views\home.cshtml" />
-    <Content Include="Views\master.cshtml" />
-    <Content Include="Views\Partials\CategoryLinks.cshtml" />
-    <Content Include="Views\Partials\Navigation\SubNavigation.cshtml" />
-    <Content Include="Views\Partials\Navigation\TopNavigation.cshtml" />
-    <Content Include="Views\Partials\SectionHeader.cshtml" />
-    <Content Include="Views\people.cshtml" />
-    <Content Include="Views\Person.cshtml" />
-    <Content Include="Views\Product.cshtml" />
-    <Content Include="Views\Products.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -477,6 +418,11 @@
       <Project>{d478a8d2-35a3-4438-8967-4bb71c5b8342}</Project>
       <Name>ContentProtector</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="css\" />
+    <Folder Include="scripts\" />
+    <Folder Include="Views\MacroPartials\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -353,5 +353,6 @@ MigrationBackup/
 .ionide/
 
 App_Data/TEMP
+App_Data/cache
 App_Data/Models
 Media/
